@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Fitify-register</title>
+    <style>
+        .borders{
+            border: 8px solid green;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            width: 50%;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            color: green;
+        }
+        h5{
+            color: green;
+            text-align: center;
+            margin: 5%;
+        }
+        .containers {
+            max-width: 820px;
+            margin: 0px auto;
+        }
+        .comment {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+        .commenter {
+            float: left;
+        }
+        .commenter img {
+            width: 35px;
+            height: 35px;
+        }
+        .comment-text-area {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .textinput {
+            float: left;
+            width: 100%;
+            min-height: 75px;
+            outline: none;
+            resize: none;
+            border: 1px solid #cde4da;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container borders">
+        <h1>Edit Receipe Details</h1>
+        <form action="/show/<%=edited._id%>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="text" class="form-control" id="image" name="receipe[image]" value="<%= edited.image %>" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Receipe Name</label>
+                <input type="text" class="form-control" id="title" name="receipe[title]" value="<%= edited.title %>" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients</label>
+                <input type="text" class="form-control" id="ingredients" name="receipe[ingredients]" value="<%= edited.ingredients %>" required>
+            </div>
+            <div class="form-group">
+                <label for="receipe">Receipe</label>
+                <input type="text" class="form-control" id="receipe" name="receipe[receipe]" value="<%= edited.receipe %>" required>
+            </div>
+            <div class="form-group">
+                <label for="cuisine">Cuisine</label><br>
+                <select name="receipe[cuisine]" id="cuisine" value="<%= edited.cuisine %>">
+                    <option value="Indian">Indian</option>
+                    <option value="American">American</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Continental">Continental</option>
+                    <option value="Russian">Russian</option>
+                </select>
+            </div>
+   
+            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+        </form>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

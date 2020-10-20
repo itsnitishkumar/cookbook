@@ -1,0 +1,70 @@
+<%- include("../partials/header") %>
+<style>
+    .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    max-width: 800px;
+    max-height: 400px;
+    min-width: 800px;
+    min-height: 400px;
+}
+h3{
+    margin-top: 20px;
+}
+h1{
+    text-transform: capitalize;
+}
+h5{
+    text-transform: capitalize;
+}
+
+p{
+    margin-top: 20px;
+}
+.lock{
+    width: 800px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="lock">
+            <div class="fill">
+                <img class="img-responsive" src="<%=receipe.image%>" >
+            </div>
+            <h1><%=receipe.title%></h1>
+            <h4>Cuisine - <%=receipe.cuisine%></h4>
+
+            <div class="ingredients">
+                <p><strong></b>Ingredients Required</strong><br><%=receipe.ingredients%></p>
+            </div>
+            <div class="receipe">
+                <p><strong>Receipe</strong><br><%=receipe.receipe%></p>
+            </div>
+
+            <h5>Author: <%=receipe.author.username%> </h5>
+            <% if(currentUser  && receipe.author.id.equals(currentUser._id)){ %>
+                <a class="btn btn-warning btn-lg" href="/receipe/<%=receipe._id%>/edit">   Edit   </a>
+                <form id="delete-form" action="/receipe/<%=receipe._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger btn-lg">Delete</button>
+                </form>
+            <% } %>
+            </div>
+
+           
+        </div>
+        
+    </div>
+    
+</div>
+
+<%- include("../partials/footer") %>

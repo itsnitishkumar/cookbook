@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitify-login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        .container{
+            border: 8px solid green;
+            margin-top: 10%;
+            width: 50%;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            color: green;
+        }
+        h5{
+            color: green;
+            text-align: center;
+            margin: 5%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sign In</h1>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+
+        </form>
+    </div>
+    <h5><a href="/register">New User.</a></h5>
+    
+</body>
+</html>

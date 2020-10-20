@@ -1,0 +1,36 @@
+<%- include("../partials/header") %>
+
+<style>
+    .receipe{
+        height: 200px;
+        width: auto;
+        background-color: green;
+        text-align: center;
+        padding-top: 65px;
+        color: white;
+    }
+
+</style>
+
+
+<div class="receipe">
+    <h1><%=secret%> Receipes</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <% receipe.forEach(function(item){ %>
+            <div class="col-6 ">
+                <img class="img-thumbnail" src=" <%= item.image %> " >
+                <div class="figure-caption">
+                    <h4><%= item.title %></h4>
+                </div>
+                <p>
+                    <a href="/show/<%= item._id %>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+        <% }); %>    
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

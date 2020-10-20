@@ -1,0 +1,161 @@
+<%- include("../partials/header") %>
+
+<style>
+    .intro:not(.slogan){
+        height: 500px;
+        max-width: 1400px;
+        position: relative;
+        background-image: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-size: cover;
+        text-align: center;
+        filter: brightness(50%);
+        
+    }
+    .slogan{
+        color: white;
+        font-size: 10vh;
+        padding-top: 235px;
+    }
+    h2{
+        text-align: center;
+        margin-top: 25px;
+        font-size: 6vh;
+    }
+
+    .indian{
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .american{
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        text-align: center;
+        border-radius: 25px;
+
+    }
+    .chinese{
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .russian{
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .continental{
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .mexican{
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        text-align: center;
+        border-radius: 25px;
+    }
+</style>
+
+<div class="intro">
+       <div class="slogan"><h1>Receipe Jungle!!!</h1></div>
+       <a href="/addreceipe" class="btn btn-outline-light">Add A Receipe</a>
+</div>    
+<div class="container">
+<h2>Our Cuisines</h2>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="row">
+            <div class=" col col-lg-6">
+                <img class="indian" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 " >
+                    <div class="figure-caption">
+                        <h4>Indian</h4>
+                    </div>
+                    <p>
+                        <a href="/indian" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-6">
+                <img class="american" src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" >
+                    <div class="figure-caption">
+                        <h4>American</h4>
+                    </div>
+                    <p>
+                        <a href="/american" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="row">
+            <div class=" col col-lg-6">
+                <img class="chinese" src=" https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" >
+                    <div class="figure-caption">
+                        <h4>Chinese</h4>
+                    </div>
+                    <p>
+                        <a href="chinese" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col col-lg-6">
+                <img class="russian" src="https://i1.wp.com/www.theculturemap.com/wp-content/uploads/2020/04/golubtsi-russian-cuisine-food-guide.jpg?fit=848%2C565" >
+                    <div class="figure-caption">
+                        <h4>Russian</h4>
+                    </div>
+                    <p>
+                        <a href="russian" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="row">
+            <div class=" col col-lg-6">
+                <img class="continental" src="https://stylesatlife.com/wp-content/uploads/2015/05/Chicken-and-spinach-macaroni.jpg" >
+                    <div class="figure-caption">
+                        <h4>Continental</h4>
+                    </div>
+                    <p>
+                        <a href="continental" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col col-lg-6">
+                <img class="mexican" src="https://images.pexels.com/photos/2338015/pexels-photo-2338015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" >
+                    <div class="figure-caption">
+                        <h4>Mexican</h4>
+                    </div>
+                    <p>
+                        <a href="mexican" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../partials/footer") %>
